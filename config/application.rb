@@ -22,7 +22,19 @@ module LiverpoolOne
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
+      config.generators do |g|
+        g.assets false    # <= css,javascriptファイルを作成しない
+        g.helper false    # <= helperファイルを作成しない
+        g.skip_routes true  # <= routes.rbを変更しない
+        g.test_framework  :rspec,
+                          view_specs: false,
+                          helper_specs: false,
+                          routing_specs: false,
+                          controller_specs: false,
+                          request_specs: false,
+                          fixtures: true
+        config.fixture_replacement :factory_bot, dir: "spec/factories"
+      end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
