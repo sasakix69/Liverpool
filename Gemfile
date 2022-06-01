@@ -57,6 +57,11 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem 'rubocop', '~> 1.30', require: false
+  gem 'rubocop-performance', require: false # 拡張機能
+  gem 'rubocop-rails', require: false # 拡張機能
+  gem 'rubocop-rspec', require: false # 拡張機能
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
