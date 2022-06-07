@@ -13,6 +13,10 @@
 // or the `imagePath` JavaScript helper below.
 //
 
+// Webpackerに画像ファイルをインポート
+const images = require.context('../images', true)
+const imagePath = (name) => images(name, true)
+
 import "../stylesheets/application"
 import jquery from "jquery"
 window.$ = window.jQuery = jquery
