@@ -44,9 +44,9 @@ gem "bootsnap", require: false
 
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+gem 'net-smtp'
 gem 'webpacker'
 # Use Sass to process CSS
 # gem "sassc-rails"
