@@ -44,5 +44,7 @@ module LiverpoolOne
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # アセットパイプラインを整えてHerokuのproduction環境でも正常に動作させる
+    config.assets.initialize_on_precompile = false
   end
 end
