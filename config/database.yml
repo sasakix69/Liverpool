@@ -80,9 +80,13 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  <<: *default
   database: Liverpool_One_production
   username: Liverpool_One
   password: <%= ENV["LIVERPOOL_ONE_DATABASE_PASSWORD"] %>
+
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
